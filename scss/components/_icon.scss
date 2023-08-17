@@ -1,0 +1,6 @@
+@use "../util/functions/typography-functions" as u;
+
+.icon {
+    width: u.em(100);
+    height: u.em(100);
+}
