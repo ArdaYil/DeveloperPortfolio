@@ -1,0 +1,27 @@
+@use "../util/functions/typography-functions" as u;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --text-primary: var(--clr-dark);
+    --text-secondary: var(--clr-light);
+}
+
+body {
+    font-family: "Open Sans";
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-size: u.rem(16);
+    font-weight: 400;
+    overflow-wrap: break-word;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
