@@ -1,0 +1,16 @@
+
+
+:root {
+    --clr-primary: "#5A12CE";
+    --clr-light: "#DFDFDF";
+    --clr-dark: "#0E0E0E";
+}
+
+body {
+    background-color: var(--clr-light);
+    color: var(--text-primary);
+}
+
+a {
+    color: var(--text-primary);
+}
