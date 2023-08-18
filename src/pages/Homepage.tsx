@@ -1,3 +1,4 @@
+import BestSellingProducts from "../components/homepage/BestSellingProducts";
 import Hero from "../components/homepage/Hero";
 
 const Homepage = () => {
@@ -5,6 +6,7 @@ const Homepage = () => {
     <>
       <main>
         <Hero />
+        <BestSellingProducts />
       </main>
     </>
   );
