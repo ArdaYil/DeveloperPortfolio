@@ -1,0 +1,34 @@
+@use "../util/functions/typography-functions" as u;
+
+%grid-item {
+    background-color: red;
+}
+
+.hero {
+    display: grid;
+    grid-template-areas: 
+    "a a b c"
+    "a a b d";
+    width: 100%;
+    max-width: u.em(1000);
+    height: u.em(500);
+    margin-inline: auto;
+    gap: u.em(10);
+
+    &__item {
+        &--a {
+            @extend %grid-item;
+            grid-area: a;
+        }
+        &--b {
+            @extend %grid-item;
+            grid-area: b;
+        }
+        &--c {
+            @extend %grid-item;
+        }
+        &--d {
+            @extend %grid-item;
+        }
+    }
+}

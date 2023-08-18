@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import IconSize from "../../types/IconSize";
 import ClassName from "../../util/ClassName";
 
 interface Props {

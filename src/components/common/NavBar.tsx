@@ -1,11 +1,10 @@
-import SearchBar from "../input/SearchBar";
-import Icon from "../icons/Icon";
-import Logo from "./Logo";
-import { Link } from "react-router-dom";
-import RoundedIcon from "../icons/RoundedIcon";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import Colors from "../../config/ColorPalette";
+import RoundedIcon from "../icons/RoundedIcon";
+import SearchBar from "../input/SearchBar";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
