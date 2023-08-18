@@ -1,0 +1,15 @@
+
+@use "../util/functions/typography-functions" as u;
+
+.search-bar {
+    border-radius: u.em(20);
+    border: u.em(1) solid var(--clr-medium);
+    padding: u.em(8) u.em(20);
+    font-size: u.rem(14);
+
+    &__input {
+        border: none;
+        outline: none;
+        background-color: var(--clr-light);
+    }
+}
