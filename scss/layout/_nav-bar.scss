@@ -1,0 +1,34 @@
+@use "../util/functions/typography-functions" as u;
+
+%section {
+    display: flex;
+    gap: u.em(30);
+    align-items: center
+};
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+    border-bottom: u.em(1) solid var(--clr-medium);
+    padding: u.em(5) u.em(30);
+
+    &__link {
+        font-weight: 600;
+    }
+
+    &__section {
+        @extend %section;
+
+        &--middle {
+            @extend %section;
+            justify-self: center;
+        }
+        
+        &--right {
+            @extend %section;
+            justify-self: right;
+            gap: u.em(15);
+        }
+    }
+}
