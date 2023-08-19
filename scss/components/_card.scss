@@ -1,0 +1,23 @@
+@use "../util/functions/typography-functions" as u;
+
+.img-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: u.em(20);
+    padding-bottom: u.em(40);
+    padding-left: u.em(20);
+    background-size: cover;
+
+    &__title {
+        font-size: u.rem(28);
+        font-weight: 600;
+        margin-bottom: u.em(10);
+    }
+
+    &__description {
+        font-size: u.rem(18);
+        width: 40%;
+        font-weight: 600;
+    }
+}
