@@ -1,0 +1,10 @@
+@use "../util/functions/typography-functions" as u;
+
+.summer-edition {
+    width: 100%;
+    max-width: u.em(1100);
+    margin-inline: auto;
+    height: u.em(500);
+    background-position-y: center;
+    margin-bottom: u.em(20);
+}
