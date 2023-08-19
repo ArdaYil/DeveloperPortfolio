@@ -11,5 +11,15 @@
         border: none;
         outline: none;
         background-color: var(--clr-light);
+        width: 100%;
     }
+}
+
+.text-input {
+    border-radius: u.em(5);
+    padding: u.em(7) u.em(10);
+    font-size: u.rem(20);
+    outline: none;
+    border: u.em(1) solid var(--clr-medium);
+    width: 100%;
 }
