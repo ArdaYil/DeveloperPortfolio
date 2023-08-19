@@ -1,6 +1,8 @@
 import BestSellingProducts from "../components/homepage/BestSellingProducts";
 import Hero from "../components/homepage/Hero";
 
+document.title = "Nova Fits | Home";
+
 const Homepage = () => {
   return (
     <>
