@@ -3,7 +3,8 @@
 %section {
     display: flex;
     gap: u.em(30);
-    align-items: center
+    align-items: center;
+    width: 100%;
 };
 
 .nav-bar {
@@ -29,7 +30,12 @@
         &--right {
             @extend %section;
             justify-self: right;
+            justify-content: right;
             gap: u.em(15);
+
+            &__search-bar {
+                width: 60%;
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ const Navbar = () => {
         </Link>
       </section>
       <section className="nav-bar__section--right">
-        <SearchBar />
+        <SearchBar className="nav-bar__section--right__search-bar" />
         <RoundedIcon icon={<BiUser size={25} />} color={Colors.medium} />
         <RoundedIcon
           icon={<AiOutlineShoppingCart size={25} />}

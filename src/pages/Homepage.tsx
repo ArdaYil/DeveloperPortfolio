@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
+import LinkButton from "../components/buttons/LinkButton";
 import ImageCard from "../components/common/ImageCard";
 import BestSellingProducts from "../components/homepage/BestSellingProducts";
 import Hero from "../components/homepage/Hero";
-import LinkButton from "../components/buttons/LinkButton";
 
 document.title = "Nova Fits | Home";
 
