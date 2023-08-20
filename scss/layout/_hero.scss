@@ -1,7 +1,14 @@
 @use "../util/functions/typography-functions" as u;
 
 %grid-item {
-    background-color: red;
+    background-size: cover;
+    background-position-x: center;
+
+    &:hover {
+        cursor: pointer;
+        filter: blur(2px);
+        transform: all 200ms;
+    }
 }
 
 .hero {
@@ -20,16 +27,20 @@
         &--a {
             @extend %grid-item;
             grid-area: a;
+            background-image: url("/src/assets/images/clothing-2023.webp");
         }
         &--b {
             @extend %grid-item;
             grid-area: b;
+            background-image: url("/src/assets/images/jeans.webp");
         }
         &--c {
             @extend %grid-item;
+            background-image: url("/src/assets/images/dog.webp");
         }
         &--d {
             @extend %grid-item;
+            background-image: url("/src/assets/images/shoes.webp");
         }
     }
 }
