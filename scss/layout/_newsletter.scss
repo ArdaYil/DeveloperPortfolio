@@ -1,0 +1,32 @@
+@use "../util/functions/typography-functions" as u;
+
+.newsletter {
+    width: 100%;
+    max-width: u.em(500);
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        gap: u.em(20);
+    }
+
+    &__heading {
+        margin-bottom: u.em(20);
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-left: u.em(2);
+    }
+
+    &__submit-btn {
+        font-size: u.rem(16) !important;
+    }
+
+    &__input-field {
+        width: 100%;
+
+        &__text-input {
+            font-size: u.rem(16) !important;
+            border-radius: u.em(10) !important;
+        }
+    }
+}
