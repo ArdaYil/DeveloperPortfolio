@@ -3,6 +3,7 @@ import ClassName from "../../util/ClassName";
 import Color from "../../types/Color";
 import { CSSProperties } from "react";
 import Colors from "../../config/ColorPalette";
+import { getColors } from "../../util/ColorHandler";
 
 interface Props {
   children: string;
@@ -12,15 +13,7 @@ interface Props {
 }
 
 const LinkButton = ({ children, to, className, color = "DARK" }: Props) => {
-  let foregroundColor: Color;
-
-  if (color === "DARK") foregroundColor = "LIGHT";
-  else foregroundColor = "DARK";
-
-  const styles: CSSProperties = {
-    backgroundColor: (Colors as any)[color.toLowerCase()],
-    color: (Colors as any)[foregroundColor.toLowerCase()],
-  };
+  const styles = getColors(color);
 
   return (
     <Link

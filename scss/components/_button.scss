@@ -1,12 +1,17 @@
 @use "../util/functions/typography-functions" as u;
 
 %button {
-    padding: u.em(10) u.em(20);
-    border-radius: u.em(10);
+    padding: u.em(7) u.em(15);
     font-size: u.rem(24);
     font-weight: 600;
+    outline: none;
+    border: none;
 }
 
 .link-button {
+    @extend %button;
+}
+
+.btn {
     @extend %button;
 }
