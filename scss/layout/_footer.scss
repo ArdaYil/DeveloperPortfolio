@@ -1,0 +1,78 @@
+@use "../util/functions/typography-functions" as u;
+
+%underline {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding-inline: u.em(100);
+    gap: u.em(100);
+    max-width: u.em(1200);
+    margin-inline: auto;
+    border-top: u.em(1) solid var(--clr-medium);
+    padding-top: u.em(30);
+    padding-inline: u.em(20);
+    margin-bottom: u.em(30);
+
+    &__header-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header {
+        display: flex;
+        gap: u.em(50);
+
+        &__section {
+            display: flex;
+            flex-direction: column;
+
+            &__link {
+                text-transform: capitalize;
+                @extend %underline;
+            }
+        }
+
+        &__heading {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        &__heading-section {
+            margin-bottom: u.em(20);
+        }
+
+        &__link-holder {
+            display: flex;
+            flex-direction: column;
+            gap: u.em(5);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+
+        &__payment-methods {
+            display: flex;
+            gap: u.em(10);
+        }
+
+        &__heading {
+            margin-bottom: u.em(10);
+        }
+
+        &__privacy {
+            display: flex;
+            gap: u.em(20);
+
+            &__link {
+                @extend %underline;
+            }
+        }
+    }
+}
