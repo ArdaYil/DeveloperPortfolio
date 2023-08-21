@@ -39,7 +39,7 @@
         &__menu {
             place-self: flex-end;
             align-self: center;
-            width: fit-content;
+            width: u.em(40);
             display: block !important;
         }
     }
