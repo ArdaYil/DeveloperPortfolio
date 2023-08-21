@@ -1,15 +1,33 @@
-const products = [{ _id: 1 }, { _id: 2 }, { _id: 3 }, { _id: 4 }, { _id: 5 }];
+import { CSSProperties } from "react";
+import ProductSystemInstance, {
+  Product,
+} from "../../systems/ProductSystem/ProductSystem";
+
+const productIds = [1, 2, 3, 4, 5];
+const bestSellingProducts =
+  ProductSystemInstance.queryProductsFromId(productIds);
+
+const setImage = (product: Product) => {
+  return product.colors[product.defaultColor];
+};
 
 const BestSellingProducts = () => {
   return (
     <section className="best-selling-products">
       <h2 className="best-selling-products__title">Best selling products!</h2>
       <article className="best-selling-products__main">
-        {products.map((product) => (
+        {bestSellingProducts.map((product) => (
           <article key={product._id} className="best-selling-products__product">
-            <div className="best-selling-products__product__image" />
-            <h3 className="best-selling-products__product__title">Title</h3>
-            <p className="best-selling-products__product__price">Price</p>
+            <img
+              className="best-selling-products__product__image"
+              src={setImage(product)}
+            />
+            <h3 className="best-selling-products__product__title">
+              {product.title}
+            </h3>
+            <p className="best-selling-products__product__price">
+              ${product.price}
+            </p>
           </article>
         ))}
       </article>
