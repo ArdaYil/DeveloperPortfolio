@@ -1,0 +1,13 @@
+@use "../util/functions/typography-functions" as f;
+
+@mixin minMedia($size) {
+    @media screen and (min-width: f.em($size)) {
+        @content;
+    }
+}
+
+@mixin maxMedia($size) {
+    @media screen and (max-width: f.em($size)) {
+        @content;
+    }
+}

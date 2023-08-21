@@ -1,4 +1,5 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { IoMdMenu } from "react-icons/io";
 import { BiUser } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Colors from "../../config/ColorPalette";
@@ -9,7 +10,7 @@ import Logo from "./Logo";
 const Navbar = () => {
   return (
     <nav className="nav-bar">
-      <section className="nav-bar__section-left">
+      <section className="nav-bar__section--left">
         <Logo />
       </section>
       <section className="nav-bar__section--middle">
@@ -36,6 +37,7 @@ const Navbar = () => {
           color={Colors.medium}
         />
       </section>
+      <IoMdMenu className="nav-bar__menu" size={40} />
     </nav>
   );
 };
