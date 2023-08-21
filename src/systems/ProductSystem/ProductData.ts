@@ -9,7 +9,7 @@ const products = {
     jackets: {
       overall: [
         {
-          title: "Solid cotton padded jacket",
+          title: "Solid jacket",
           price: 50,
           colors: { green: `${menJackets}/jacket1/GreenJacket.webp` },
           _id: 1,
@@ -20,8 +20,8 @@ const products = {
     suits: {
       overall: [
         {
-          title: "Solid cotton padded jacket",
-          price: 50,
+          title: "Gentleman suit",
+          price: 400,
           colors: { blue: `${menSuits}/suit1/blueSuit.webp` },
           _id: 3,
           defaultColor: "blue",
