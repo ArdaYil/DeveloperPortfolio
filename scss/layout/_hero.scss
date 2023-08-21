@@ -1,4 +1,4 @@
-@use "../util/functions/typography-functions" as u;
+@use "../util/" as u;
 
 %grid-item {
     background-size: cover;
@@ -10,19 +10,38 @@
         transition: all 400ms;
         transform: scale(1.01);
     }
+
+    @media (pointer: coarse) {
+        &:hover {
+            transform: none;
+            filter: none
+        }
+    }
 }
 
 .hero {
     display: grid;
     grid-template-areas: 
-    "a a b c"
-    "a a b d";
+        "a a b c"
+        "a a b d";
     width: 100%;
     max-width: u.em(1000);
-    height: u.em(500);
+    height: auto;
+    aspect-ratio: 2/1;
     margin-inline: auto;
     gap: u.em(10);
     margin-bottom: u.em(70);
+
+    @include u.maxMedia(600) {
+        grid-template-areas: 
+            "b c"
+            "b d"
+            "a a"
+            "a a";
+
+        aspect-ratio: 1/1.5;
+        max-height: u.em(700);
+    }
 
     &__item {
         &--a {
