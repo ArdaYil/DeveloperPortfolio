@@ -1,23 +1,51 @@
-@use "../util/functions/typography-functions" as u;
+@use "../util" as u;
 
 .img-card {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
     padding-top: u.em(20);
     padding-bottom: u.em(40);
     padding-left: u.em(20);
     background-size: cover;
 
+    $headerWidth: 75%;
+
+    @include u.maxMedia(800) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+
+        &__description {
+            width: 100% !important;
+        }
+
+        &__header {
+            width: 100%;
+        }
+
+        &__footer {
+            place-self: flex-end;
+            padding-right: u.em(30);
+        }
+    }
+    
+    &__footer {
+        align-self: flex-end;
+    }
+
     &__title {
         font-size: u.rem(28);
         font-weight: 600;
         margin-bottom: u.em(10);
+        display: block;
     }
 
     &__description {
         font-size: u.rem(18);
         width: 40%;
         font-weight: 600;
+    }
+
+    a {
+        margin-top: 50px;
     }
 }
