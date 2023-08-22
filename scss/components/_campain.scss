@@ -7,4 +7,8 @@
     aspect-ratio: 4/1.8;
     background-position-y: center;
     margin-bottom: u.em(80);
+
+    @include u.maxMedia(500) {
+        aspect-ratio: 4/3;
+    }
 }

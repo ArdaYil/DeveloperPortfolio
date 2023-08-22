@@ -1,4 +1,4 @@
-@use "../util/functions/typography-functions" as u;
+@use "../util" as u;
 
 .best-selling-products {
     margin-bottom: u.em(80);

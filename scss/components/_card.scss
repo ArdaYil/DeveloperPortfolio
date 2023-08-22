@@ -30,6 +30,12 @@
     
     &__footer {
         align-self: flex-end;
+
+        @include u.maxMedia(500) {
+            a {
+                font-size: u.rem(16);
+            }
+        }
     }
 
     &__title {
@@ -43,6 +49,10 @@
         font-size: u.rem(18);
         width: 40%;
         font-weight: 600;
+
+        @include u.maxMedia(500) {
+            font-size: u.rem(14);
+        }
     }
 
     a {
