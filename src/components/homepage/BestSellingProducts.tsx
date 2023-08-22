@@ -2,6 +2,8 @@ import { CSSProperties } from "react";
 import ProductSystemInstance, {
   Product,
 } from "../../systems/ProductSystem/ProductSystem";
+import Badge from "../common/Badge";
+import Colors from "../../config/ColorPalette";
 
 const productIds = [1, 2, 3, 4, 5];
 const bestSellingProducts =
@@ -25,9 +27,12 @@ const BestSellingProducts = () => {
             <h3 className="best-selling-products__product__title">
               {product.title}
             </h3>
-            <p className="best-selling-products__product__price">
-              ${product.price}
-            </p>
+            <Badge
+              color={"MEDIUM"}
+              className="best-selling-products__product__price"
+            >
+              ${product.price.toString()}
+            </Badge>
           </article>
         ))}
       </article>
