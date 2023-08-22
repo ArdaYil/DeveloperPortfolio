@@ -15,7 +15,7 @@
 
     &__main {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(u.em(150), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(u.em(200), 1fr));
         align-content: stretch;
         margin-inline: auto;
         width: 100%;
@@ -27,18 +27,26 @@
     &__product {
         height: auto;
         aspect-ratio: 1/1.4;
-        border: u.em(1) solid var(--clr-medium);
         padding: u.em(10);
         overflow: hidden;
         cursor: pointer;
 
         &__image {
             margin-bottom: u.em(10);
+            padding: u.em(20) u.em(10);
+            background-color: rgb(228, 228, 228);
+            border-radius: u.em(10);
         }
 
         &__title {
             white-space: nowrap;
             font-weight: 600;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            padding-inline: u.em(5);
         }
     }
 }

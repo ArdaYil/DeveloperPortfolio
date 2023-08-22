@@ -1,7 +1,7 @@
 @use "../util" as u;
 
 .badge {
-    border-radius: u.em(10);
+    border-radius: u.em(7);
     display: inline-block;
     padding: u.em(2) u.em(9);
     font-weight: 600;

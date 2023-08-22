@@ -24,15 +24,17 @@ const BestSellingProducts = () => {
               className="best-selling-products__product__image"
               src={setImage(product)}
             />
-            <h3 className="best-selling-products__product__title">
-              {product.title}
-            </h3>
-            <Badge
-              color={"MEDIUM"}
-              className="best-selling-products__product__price"
-            >
-              ${product.price.toString()}
-            </Badge>
+            <footer className="best-selling-products__product__footer">
+              <h3 className="best-selling-products__product__title">
+                {product.title}
+              </h3>
+              <Badge
+                color={"MEDIUM"}
+                className="best-selling-products__product__price"
+              >
+                ${product.price.toString()}
+              </Badge>
+            </footer>
           </article>
         ))}
       </article>
