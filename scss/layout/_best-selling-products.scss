@@ -2,6 +2,7 @@
 
 .best-selling-products {
     margin-bottom: u.em(80);
+    padding-inline: u.em(40);
 
     &__title {
         font-size: u.rem(25);
@@ -13,15 +14,19 @@
     }
 
     &__main {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(u.em(150), 1fr));
+        align-content: stretch;
         margin-inline: auto;
-        width: fit-content;
+        width: 100%;
+        max-width: u.em(1200);
         gap: u.em(20);
+        flex-wrap: wrap;
     }
 
     &__product {
-        width: u.em(200);
-        height: fit-content;
+        height: auto;
+        aspect-ratio: 1/1.4;
         border: u.em(1) solid var(--clr-medium);
         padding: u.em(10);
         overflow: hidden;
