@@ -1,0 +1,21 @@
+@use "screen-media" as m;
+
+$breakpoints: (
+    "medium": 600,
+    "large": 1200,
+    "xlarge": 1900,
+);
+
+@mixin breakpoint-up($size) {
+    @include m.minMedia(map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    $newSize: map-get($breakpoints, $size) - 0.02;
+
+    @include m.maxMedia($newSize) {
+        @content;
+    }
+}

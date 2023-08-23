@@ -1,14 +1,6 @@
 @use "../util" as u;
 
 .campain {
-    width: 100%;
-    max-width: u.em(1100);
     margin-inline: auto;
-    aspect-ratio: 4/1.8;
-    background-position-y: center;
     margin-bottom: u.em(80);
-
-    @include u.maxMedia(500) {
-        aspect-ratio: 4/3;
-    }
 }

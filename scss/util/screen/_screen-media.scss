@@ -1,4 +1,4 @@
-@use "../util/functions/typography-functions" as f;
+@use "../functions/typography-functions" as f;
 
 @mixin minMedia($size) {
     @media screen and (min-width: f.em($size)) {
