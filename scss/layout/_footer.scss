@@ -1,4 +1,4 @@
-@use "../util/functions/typography-functions" as u;
+@use "../util" as u;
 
 %underline {
     &:hover {
@@ -18,14 +18,30 @@
     padding-inline: u.em(20);
     margin-bottom: u.em(30);
 
+    @include u.maxMedia(570) {
+        gap: u.em(50);
+    }
+
     &__header-section {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 3fr auto;
+        flex-wrap: wrap;
+        gap: u.em(50);
+
+        @include u.maxMedia(870) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr
+        }
     }
 
     &__header {
         display: flex;
         gap: u.em(50);
+
+        @include u.maxMedia(530) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         &__section {
             display: flex;
@@ -34,12 +50,29 @@
             &__link {
                 text-transform: capitalize;
                 @extend %underline;
+
+                @include u.maxMedia(600) {
+                    font-size: u.rem(14);
+                }
+
+                @include u.maxMedia(530) {
+                    font-size: u.rem(16);
+                    text-align: center;
+                }
             }
         }
 
         &__heading {
             font-weight: 600;
             text-transform: uppercase;
+
+            @include u.maxMedia(600) {
+                font-size: u.rem(14);
+            }
+
+            @include u.maxMedia(530) {
+                font-size: u.rem(18);
+            }
         }
 
         &__heading-section {
@@ -51,15 +84,28 @@
             flex-direction: column;
             gap: u.em(5);
         }
+
+        @include u.maxMedia(870) {
+            justify-content: space-around;
+        }
     }
 
     &__footer {
         display: flex;
         justify-content: space-between;
 
+        @include u.maxMedia(570) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
         &__payment-methods {
             display: flex;
             gap: u.em(10);
+
+            @include u.maxMedia(570) {
+                margin-bottom: u.em(10);
+            }
         }
 
         &__heading {

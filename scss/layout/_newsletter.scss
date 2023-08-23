@@ -1,13 +1,36 @@
-@use "../util/functions/typography-functions" as u;
+@use "../util" as u;
 
 .newsletter {
+    $breakpoint: 1120;
+
     width: 100%;
     max-width: u.em(500);
+    justify-self: right;
+
+    @include u.maxMedia($breakpoint) {
+        max-width: u.em(300);
+    }
+
+
+    @include u.maxMedia(870) {
+        grid-row: 1/2;
+        justify-self: center;
+        max-width: u.em(500);
+    }
 
     &__form {
         display: flex;
         justify-content: space-between;
         gap: u.em(20);
+
+        @include u.maxMedia($breakpoint) {
+            flex-direction: column;
+            justify-self: left;
+        }
+
+        @include u.maxMedia(870) {
+            flex-direction: row;
+        }
     }
 
     &__heading {
