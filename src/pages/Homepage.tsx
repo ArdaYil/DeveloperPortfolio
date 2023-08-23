@@ -24,7 +24,7 @@ const Homepage = () => {
           className="campain"
           src="/src/assets/images/summer.webp"
           title="Summer 2023"
-          description="Check out our new summer collection for this year. Now with the best deals ever. Unleash your summer wardrobe!"
+          description="Check out our new summer collection for this year. Now with the best deals ever!"
           button={
             <LinkButton to="/clothing?=summer-editon">Buy Now!</LinkButton>
           }
