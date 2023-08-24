@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import TextInput, { Props as TextInputProps } from "../input/TextInput";
+import TextInput from "../input/TextInput";
 import ErrorMessage from "./ErrorMessage";
 import FormContext from "./FormContext";
 
@@ -10,7 +10,7 @@ type Porps = {
 };
 
 const InputField = ({ name, placeholder, className }: Porps) => {
-  const { data, errors, setData, setErrors } = useContext(FormContext);
+  const { data, errors, setData } = useContext(FormContext);
 
   return (
     <article className={className}>

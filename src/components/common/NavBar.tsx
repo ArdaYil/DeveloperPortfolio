@@ -1,14 +1,13 @@
+import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { IoMdMenu } from "react-icons/io";
 import { BiUser } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Colors from "../../config/ColorPalette";
+import MenuButton from "../buttons/MenuButton";
 import RoundedIcon from "../icons/RoundedIcon";
 import SearchBar from "../input/SearchBar";
 import Logo from "./Logo";
 import PhoneMenu from "./PhoneMenu";
-import { useState } from "react";
-import MenuButton from "../buttons/MenuButton";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

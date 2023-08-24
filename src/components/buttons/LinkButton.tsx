@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import ClassName from "../../util/ClassName";
 import Color from "../../types/Color";
-import { CSSProperties } from "react";
-import Colors from "../../config/ColorPalette";
+import ClassName from "../../util/ClassName";
 import { getColors } from "../../util/ColorHandler";
 
 interface Props {

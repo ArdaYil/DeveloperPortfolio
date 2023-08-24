@@ -1,9 +1,7 @@
-import { CSSProperties } from "react";
 import ProductSystemInstance, {
   Product,
 } from "../../systems/ProductSystem/ProductSystem";
 import Badge from "../common/Badge";
-import Colors from "../../config/ColorPalette";
 
 const productIds = [1, 2, 3, 4, 5];
 const bestSellingProducts =
