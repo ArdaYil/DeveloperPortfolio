@@ -6,8 +6,16 @@ import Colors from "../../config/ColorPalette";
 import RoundedIcon from "../icons/RoundedIcon";
 import SearchBar from "../input/SearchBar";
 import Logo from "./Logo";
+import PhoneMenu from "./PhoneMenu";
+import { useState } from "react";
+import MenuButton from "../buttons/MenuButton";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const openMenu = () => setMenuOpen(true);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <nav className="nav-bar">
       <section className="nav-bar__section--left">
@@ -37,7 +45,8 @@ const Navbar = () => {
           color={Colors.medium}
         />
       </section>
-      <IoMdMenu className="nav-bar__menu" size={40} />
+      <MenuButton onMenuOpen={openMenu} />
+      <PhoneMenu menuOpen={menuOpen} onMenuClose={closeMenu} />
     </nav>
   );
 };

@@ -1,0 +1,55 @@
+@use "../util" as u;
+
+.phone-menu {
+    padding-top: env(safe-area-inset-top);
+    height: calc(env(safe-area-inset-top) + 300vh);
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    top: 0;
+    padding-top: u.em(15);
+    background-color: var(--clr-product-bg);
+    width: 0;
+    transition: all 200ms;
+    display: flex;
+    flex-direction: column;
+    gap: u.em(20);
+
+    &__header {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: u.em(10);
+        margin-bottom: u.em(10);
+
+        &__close-btn {
+            width: u.em(30);
+        }
+    }
+
+    &__search-bar-container {
+        padding-left: u.em(20);
+        padding-right: u.em(50);
+        margin-bottom: u.em(20);
+    }
+
+    &__search-bar {
+        input {
+            background-color: var(--clr-product-bg);
+        }
+    }
+
+    &__category-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        font-size: u.rem(18);
+        margin-bottom: u.em(5);
+        margin-left: u.em(20);
+    }
+}
+
+.phone-menu.open {
+    width: u.em(300);
+}
