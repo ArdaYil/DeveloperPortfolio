@@ -1,7 +1,10 @@
+import useImages from "../../hooks/useImages";
 import Icon from "../icons/Icon";
 
 const Logo = () => {
-  return <Icon className="clickable" src="/src/assets/icons/logo.png" />;
+  const { data: logo } = useImages("icons:Logo.png", "png");
+
+  return <Icon className="clickable" src={logo as string} />;
 };
 
 export default Logo;

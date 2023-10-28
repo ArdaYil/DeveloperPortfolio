@@ -176,17 +176,15 @@ a {
 }
 .hero__item--a {
   grid-area: a;
-  background-image: url("/src/assets/images/clothing-2023.webp");
 }
 .hero__item--b {
   grid-area: b;
-  background-image: url("/src/assets/images/jeans.webp");
 }
 .hero__item--c {
-  background-image: url("/src/assets/images/dog.webp");
+  grid-area: c;
 }
 .hero__item--d {
-  background-image: url("/src/assets/images/shoes.webp");
+  grid-area: d;
 }
 
 .best-selling-products {

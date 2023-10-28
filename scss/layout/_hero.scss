@@ -47,20 +47,18 @@
         &--a {
             @extend %grid-item;
             grid-area: a;
-            background-image: url("/src/assets/images/clothing-2023.webp");
         }
         &--b {
             @extend %grid-item;
             grid-area: b;
-            background-image: url("/src/assets/images/jeans.webp");
         }
         &--c {
             @extend %grid-item;
-            background-image: url("/src/assets/images/dog.webp");
+            grid-area: c;
         }
         &--d {
             @extend %grid-item;
-            background-image: url("/src/assets/images/shoes.webp");
+            grid-area: d;
         }
     }
 }

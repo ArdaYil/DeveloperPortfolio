@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import NewsLetter from "../homepage/NewsLetter";
+import useImages from "../../hooks/useImages";
 
 const footerData = [
   {
@@ -17,6 +18,14 @@ const footerData = [
 ];
 
 const Footer = () => {
+  const { data: mastercard } = useImages("vectors:mastercard.svg", "svg+xml");
+  const { data: maestro } = useImages("vectors:maestro.svg", "svg+xml");
+  const { data: visa } = useImages("vectors:visa.svg", "svg+xml");
+  const { data: applePay } = useImages("vectors:apple-pay.svg", "svg+xml");
+  const { data: paypal } = useImages("vectors:paypal.svg", "svg+xml");
+
+  console.log(mastercard);
+
   return (
     <footer className="footer">
       <header className="footer__header-section">
@@ -56,17 +65,11 @@ const Footer = () => {
           </article>
         </section>
         <section className="footer__footer__payment-methods">
-          <img
-            className="icon--small"
-            src="/src/assets/vectors/mastercard.svg"
-          />
-          <img className="icon--small" src="/src/assets/vectors/maestro.svg" />
-          <img className="icon--small" src="/src/assets/vectors/visa.svg" />
-          <img
-            className="icon--small"
-            src="/src/assets/vectors/apple-pay.svg"
-          />
-          <img className="icon--small" src="/src/assets/vectors/paypal.svg" />
+          <img className="icon--small" src={mastercard} />
+          <img className="icon--small" src={maestro} />
+          <img className="icon--small" src={visa} />
+          <img className="icon--small" src={applePay} />
+          <img className="icon--small" src={paypal} />
         </section>
       </footer>
     </footer>
