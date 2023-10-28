@@ -20,7 +20,6 @@ class ProductSystem {
     const queriedProducts = [] as Array<Product>;
 
     const execute = (data: Product) => {
-      console.log(data);
       if (ids.find((id) => id === data._id)) queriedProducts.push(data);
     };
 
